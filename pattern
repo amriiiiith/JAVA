@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class PyramidStarPattern {
+
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from the user
+        Scanner scanner = new Scanner(System.in);
+        
+        // Prompt the user to enter the number of rows
+        System.out.print("Enter the number of rows for the pyramid: ");
+        int rows = scanner.nextInt();
+        
+        // Generate the pyramid star pattern
+        for (int i = 1; i <= rows; i++) { // Iterate over each row
+            // Print spaces for left alignment
+            for (int j = i; j < rows; j++) {
+                System.out.print(" ");
+            }
+            
+            // Print stars
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+            
+            // Move to the next line after each row
+            System.out.println();
+        }
+        
+        // Close the scanner
+        scanner.close();
+    }
+}
