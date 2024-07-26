@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class VoterEligibility {
+    
+    // Function to check voting eligibility and calculate years left
+    public static void checkEligibility(int age) {
+        final int VOTING_AGE = 18; // Define the legal voting age
+        
+        if (age >= VOTING_AGE) {
+            System.out.println("You are eligible to vote.");
+        } else {
+            int yearsLeft = VOTING_AGE - age;
+            System.out.println("You are not eligible to vote. You have " + yearsLeft + " years left to be eligible.");
+        }
+    }
+
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from the user
+        Scanner scanner = new Scanner(System.in);
+        
+        // Prompt the user to enter their age
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+        
+        // Check voting eligibility and calculate years left if not eligible
+        checkEligibility(age);
+        
+        // Close the scanner
+        scanner.close();
+    }
+}
+
