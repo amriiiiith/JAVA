@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class ReverseWord {
+    // Function to reverse a word using a loop
+    public static String reverseWord(String word) {
+        // Initialize an empty string to store the reversed word
+        String reversedWord = "";
+        
+        // Iterate through the word in reverse order
+        for (int i = word.length() - 1; i >= 0; i--) {
+            // Append each character to the reversedWord
+            reversedWord += word.charAt(i);
+        }
+        
+        return reversedWord;
+    }
